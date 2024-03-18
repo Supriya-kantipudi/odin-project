@@ -1,0 +1,23 @@
+.logo{
+    font-weight:900;
+    font-size: 30px;
+    
+}
+.container{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    color:rgb(2, 2, 95);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul{
+    list-style:none;
+}
+.notification{
+    border:3px solid rgb(4, 4, 88);
+    border-radius: 3px;
+    padding:4px;
+    margin-left:700px;
+    color:white;
+    background-color:rgb(2, 2, 95) ;
+}
