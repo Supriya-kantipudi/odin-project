@@ -1,0 +1,123 @@
+header{
+    display:flex;
+    list-style: none;
+    
+    padding:0px;
+    margin:0px;
+    margin-bottom:150px;
+}
+.right-items{
+    margin-left:700px;
+    
+    
+    display:flex;
+}
+.right-items li{
+    padding: 10px;
+    color:#E5E7EB;
+}
+.Logo{
+    margin-left:100px;
+    padding:9px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #F9FAF8;
+    
+}
+.top-content{
+    background-color: #1F2937;
+}
+.main-header {
+    display:flex;
+    
+}
+.main-header .right{
+    margin-left:100px;
+}
+.main-header h1{
+    margin-left:100px;
+    color: #F9FAF8;
+}
+.main-header p{
+    margin-left:100px;
+    color:#E5E7EB;
+}
+.main-header button{
+    margin-left:100px;
+    width:100px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: White;
+    background-color: rgb(12, 58, 156);
+}
+.top-content{
+    padding-bottom: 80px;
+}
+.middle-content h1{
+    font-size:36px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px;
+    
+}
+.middle-content .images{
+    display: flex;
+    margin-left:100px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.middle-content .images div{
+   margin-left:100px;
+    height: 150px;
+    width:170px;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+.third-content{
+    background-color: rgb(206, 198, 198);
+    
+}
+.third-content .content{
+    margin-left: 100px;
+    margin-right: 110px;
+    padding-top:80px;
+    padding-bottom:50px;
+}
+.third-content .content blackquote footer{
+    font-weight: bold;
+}
+.third-content .content blackquote p{
+    font-size: 36px;
+    font-style: italic;
+}
+.fourth-content{
+    padding-top:80px;
+    padding-left:100px;
+    padding-right:100px;
+    padding-bottom:50px;
+}
+.fourth-content .content{
+    background-color:rgb(22, 93, 226);
+    color:white;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:30px;
+    padding-bottom:30px;
+    display: flex;
+    border-radius: 5px;
+}
+.fourth-content .content .two{
+    
+    align-items: center;
+    padding-left: 100px;
+    margin-left: 200px;
+    padding-top: 40px;
+}
+.fifth-content{
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 600px;
+}
