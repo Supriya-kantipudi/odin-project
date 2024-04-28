@@ -7,66 +7,80 @@ function getComputerChoice(){
     }
 
 }
+let us = 0;
+let comp = 0;
 function playRound(ComputerSelection,userSelection){
+    let msg = document.querySelector('.result');
     if(ComputerSelection == "rock" && userSelection == "paper"){
-        console.log("You win! Paper beats Rock");
-        return "user";
+        msg.innerText = "You win!rock beats paper"
+        msg.style.backgroundColor = "green";
+        us++;
     }
     else if(ComputerSelection == "paper" && userSelection == "scissor"){
-        console.log("You win! Scissor beats Paper");
-        return "user";
+        msg.innerText = "You win! Scissor beats Paper";
+        msg.style.backgroundColor = "green";
+        us++;
     }
     else if(ComputerSelection == "scissor" && userSelection == "rock"){
-        console.log("You win! Rock beats Scissor");
-        return "user";
+        msg.innerText = "You win! Rock beats Scissor";
+        msg.style.backgroundColor = "green";
+        us++;
     }
     else if(ComputerSelection == "scissor" && userSelection == "paper"){
-        console.log("You Lose! Scissor beats Paper");
-        return "computer";
+        msg.innerText = "You Lose! Scissor beats Paper";
+        msg.style.backgroundColor = "red";
+        comp++;
     }
     else if(ComputerSelection == "paper" && userSelection == "rock"){
-        console.log("You Lose! Paper beats Rock");
-        return "computer";
+        msg.innerText = "You Lose! Paper beats Rock";
+        msg.style.backgroundColor = "red";
+        comp++;
     }
     else if(ComputerSelection == "rock" && userSelection == "scissor"){
-        console.log("You Lose! Rock beats Scissor");
-        return "computer";
+        msg.innerText = "You Lose! Rock beats Scissor";
+        msg.style.backgroundColor = "red";
+        comp++;
     }
     else if(ComputerSelection == "rock" && userSelection == "rock"){
-        console.log("Draw ! Rock n Rock");
-        return "draw";
+        msg.innerText = "Draw ! Rock n Rock";
+        msg.style.backgroundColor = "yellow"
+       
     }
     else if(ComputerSelection == "paper" && userSelection == "paer"){
-        console.log("Draw ! Paper n Paer");
-        return "draw";
+        msg.innerText = "Draw ! Paper n Paer";
+        msg.style.backgroundColor = "yellow";
+        
     }
     else{
-        console.log("Draw ! Scissor n Scissor");
-        return "draw";
+        msg.innerText = "Draw ! Scissor n Scissor";
+        msg.style.backgroundColor = "yellow";
+        
     }
     
 }
-let us = 0;
-let comp = 0;
-for(let i=0;i<5;i++){
-    let Computer = getComputerChoice();
-    let user = prompt("Play Rock Paper or Scissor");
-    let userSelection = user.toLowerCase();
-   
-    let winner = playRound(Computer,userSelection);
-    if(winner == "user"){
-        us += 1;
-    }
-    else if(winner == "computer"){
-        comp += 1;
-    }
-}
-if(us>comp){
-    console.log("You Won");
-}
-else if(comp > us){
-    console.log("You Lose");
-}
-else{
-    console.log("Draw");
-}
+
+let choices = document.querySelectorAll('.choice');
+choices.forEach((choice)=>{
+    choice.addEventListener("click",()=>{
+        let userChoice = choice.getAttribute('id');
+        let computerChoice = getComputerChoice();
+        playRound(computerChoice,userChoice);
+        let userScore = document.querySelector('.comp-score');
+        let compScore = document.querySelector('.user-score');
+        userScore.innerText= us;
+        compScore.innerText = comp;
+    });
+});
+let restart = document.querySelector('.restart');
+restart.addEventListener("click",() => {
+    us = 0;
+    comp = 0;
+    let userScore = document.querySelector('.comp-score');
+    let compScore = document.querySelector('.user-score');
+    userScore.innerText= us;
+    compScore.innerText = comp;
+    let msg = document.querySelector('.result');
+    msg.innerText = "Lets play the Game";
+    msg.style.backgroundColor = "green";
+
+})

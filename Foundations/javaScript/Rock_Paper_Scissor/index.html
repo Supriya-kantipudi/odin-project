@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1> Rock Paper Scissor</h1>
+    <div class="choices">
+        <img src="./images/paper.png" id="paper" class="choice">
+        <img src="./images/rock.png" id="rock" class="choice">
+        <img src="./images/scissors.png" id="scissors" class="choice">
+    </div>
+    <div class="Score">
+        <div class="Computer">
+        <h2>Computer</h2>
+        <p class="comp-score">0</p>
+        </div>
+        <div class="User">
+        <h2>User</h2>
+        <p class ="user-score">0</p>
+        </div>
+    </div>
+    <div class="Result">
+    <button class="result">Play your game</button>
+    </div>
+    <button class="restart">Restart</button>
+    <script src="script.js"></script>
 </body>
 </html>
