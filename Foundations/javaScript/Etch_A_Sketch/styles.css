@@ -1,0 +1,40 @@
+div{
+   
+    margin:1px;
+}
+.rowDiv{
+    display: flex;
+}
+.squareDiv{
+    padding:10px;
+    border:1px solid rgb(162, 180, 185);
+}
+h1{
+    text-align: center;
+}
+.options{
+    display:flex;
+    justify-content: center;
+   
+}
+.choice{
+    margin-left:60px;
+    margin-right:60px;
+}
+button{
+    width:120px;
+    border-radius: 5px;
+    background-color: white;
+}
+section{
+    margin-left: 500px;
+
+}
+
+section>button{
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: green;
+    color:white;
+}

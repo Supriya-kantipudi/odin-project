@@ -46,7 +46,7 @@ function playRound(ComputerSelection,userSelection){
         msg.style.backgroundColor = "yellow"
        
     }
-    else if(ComputerSelection == "paper" && userSelection == "paer"){
+    else if(ComputerSelection == "paper" && userSelection == "paper"){
         msg.innerText = "Draw ! Paper n Paer";
         msg.style.backgroundColor = "yellow";
         
