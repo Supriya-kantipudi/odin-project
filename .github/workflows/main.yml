@@ -4,8 +4,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  first_job:
+  trigger:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.MY_API_KEY }}
     steps:
-      - name: print greeting
-        run: echo "Hello greeting"
+      - name: Trigger regression tests
+        run: |
+          gh workflow run build-projects.yaml \
+          --repo "Supriya-kantipudi/g_act_pr" \
+          -f commit_version=${{ github.sha }}
